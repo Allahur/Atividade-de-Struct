@@ -84,13 +84,14 @@ void exibir(){
 
 	for(int i = topo; i >= 0; i--) // Um for para exibir os valores dentro da pilha/lista no topo
 		{
+			setlocale(LC_ALL, "pt-br");
 			cout << "\n";
-			cout << tb.dado[i] << endl;
-			cout << tb.idade << endl;
-			cout << tb.salario << endl; 
+			cout << "Nome: " <<  tb.dado[i] << endl;
+			cout << "Idade: " <<  tb.idade << endl;
+			cout << "Salário: " << tb.salario << endl; 
 			cout << "\n-----------------\n";
 		}
-	system("sleep 4");
+	system("sleep 3");
 }
 int tela(){
 	int option;
