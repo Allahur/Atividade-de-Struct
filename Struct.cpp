@@ -3,15 +3,6 @@ Faça o código estruturado para controlar uma LIFO com arranjo não
 dinâmico contendo os atributos: nome, idade e salário. Você deverá 
 implementar as seguintes sub rotinas obrigatŕias:
 */
-/*
-A. push() para empilhar o registro
-B. pop() para remover registros
-C. int mostrar() para mostrar os registros da LIFO
-D. bool cheia() verificar se a LIFO está cheia
-E. bool vazia() verificar se a LIFO está vazia
-F. int tela () exibe a tela e armazena a opção de escolha do menu 
-G. void Controle() controla o menu de controle da LIFO 
-*/
 
 #include "iostream" // usar o cout e o cin
 #include "iomanip" // biblioteca de decimas e que possibilita a usar o fixed << setprecision(2)
