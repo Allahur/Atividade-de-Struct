@@ -66,7 +66,11 @@ topo ++; // Valor vai ser posto sempre acima
 	tb.dado[topo] = lerNome();
 	tb.idade = lerIdade();
 	tb.salario = lerSalario();
-	cout << "\nValor empilhado foi: \n\n"; // irá puxar os valores na sua escolha e armazená-las
+	cout << "\nValor empilhado foi: \n\n"; // irá puxar os valores na sua escolha e armazená-las 
+        cout << "\n" << tb.dado[tb.nome] << endl;
+	cout << "\n" << tb.idade << endl;
+	cout << "\n" << tb.salario << endl << "\n";
+	system("sleep 3");
 }
 void pop(){
 	if(vazio() == 1) // Caso for escolhido a opção de limpar ele vai apagar todos os registros
