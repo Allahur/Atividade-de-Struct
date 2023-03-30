@@ -3,6 +3,15 @@ Faça o código estruturado para controlar uma LIFO com arranjo não
 dinâmico contendo os atributos: nome, idade e salário. Você deverá 
 implementar as seguintes sub rotinas obrigatŕias:
 */
+/*
+A. push() para empilhar o registro
+B. pop() para remover registros
+C. int mostrar() para mostrar os registros da LIFO
+D. bool cheia() verificar se a LIFO está cheia
+E. bool vazia() verificar se a LIFO está vazia
+F. int tela () exibe a tela e armazena a opção de escolha do menu 
+G. void Controle() controla o menu de controle da LIFO 
+*/
 
 #include "iostream" // usar o cout e o cin
 #include "iomanip" // biblioteca de decimas e que possibilita a usar o fixed << setprecision(2)
@@ -39,6 +48,7 @@ int cheia() // Mostrar a lista cheia
 		return 0;
 }
 string lerNome(){ // Armazenar variaveis do tipo string(qualquer)
+	setlocale(LC_ALL, "pt-br");
 	string nome;
 	cout << "\nDigite o seu nome: ";
   cin.ignore();
@@ -66,10 +76,10 @@ topo ++; // Valor vai ser posto sempre acima
 	tb.dado[topo] = lerNome();
 	tb.idade = lerIdade();
 	tb.salario = lerSalario();
-	cout << "\nValor empilhado foi: \n\n"; // irá puxar os valores na sua escolha e armazená-las 
-        cout << "\n" << tb.dado[tb.nome] << endl;
-	cout << "\n" << tb.idade << endl;
-	cout << "\n" << tb.salario << endl << "\n";
+	cout << "\nValor empilhado foi: \n"; // irá puxar os valores na sua escolha e armazená-las 
+  cout << "\n" << tb.dado[tb.nome];
+	cout << "\n" << tb.idade;
+	cout << "\n" << tb.salario << "\n";
 	system("sleep 3");
 }
 void pop(){
@@ -91,18 +101,20 @@ void exibir(){
 			cout << "Salário: " << tb.salario << endl; 
 			cout << "\n-----------------\n";
 		}
-	system("sleep 3");
+	system("sleep 4");
 }
 int tela(){
+system("clear");
 	int option;
-
-	do{
-		system("clear");
-		cout << "\n1 - puxar valor \n2 - Limpar pilha \n3 - exibir \n4 - sair";
+		cout << "\n1 - Puxar valor \n2 - Limpar pilha \n3 - Exibir \n4 - Sair";
 		cout << "\n\nSelecione: ";
 		cin >> option;
+return option;
+}
+void controle(){
 
-		switch(option){
+	do{
+		switch(tela()){
 
 			case 1:
 				push(); // puxando o valor e armazenando
@@ -118,12 +130,11 @@ int tela(){
 			break;
 			default: 
 			cout << "Erro"; // caso for introduzido algo errado.
-		}
-	} while (true); // se isso for verdadeiro ele vai de acordo com a escolha da opção 
+		} 
+  }while (true); // se isso for verdadeiro ele vai de acordo com a escolha da opção 
 }
-
 int main(){
 	setlocale(LC_ALL, "pt-br"); // Chamar a acentuação brasileira
-	tela(); // função onde está a escolha e as outras funções e estrutura 
+	controle(); // função onde está a escolha e as outras funções e estrutura 
 	return 0;
 }
