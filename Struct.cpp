@@ -7,8 +7,8 @@ implementar as seguintes sub rotinas obrigatŕias:
 A. push() para empilhar o registro
 B. pop() para remover registros
 C. int mostrar() para mostrar os registros da LIFO
-D. bool cheia() verificar se a LIFO está cheia
-E. bool vazia() verificar se a LIFO está vazia
+D. void cheia() verificar se a LIFO está cheia
+E. void vazia() verificar se a LIFO está vazia
 F. int tela () exibe a tela e armazena a opção de escolha do menu 
 G. void Controle() controla o menu de controle da LIFO 
 */
